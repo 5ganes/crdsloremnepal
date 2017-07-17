@@ -1,0 +1,7 @@
+.slider-div div ul li{list-style: none;}
+.dnone{display: none};
+.dblock{display: block;}
+.opacityone{opacity: 1;}
+.opacityzero{opacity: 0;}
+.slideold{ transition: 3s; opacity: 0;}
+.slidenew{transition: 3s; opacity:1;}
