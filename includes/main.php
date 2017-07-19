@@ -1,5 +1,5 @@
-<div class="10u row">
-    <div class="9u skel-cell-important">
+<div class="9u row">
+    <div class="8u skel-cell-important">
         <section class="sidebar welcome">
             <header>
                 <?php $welcome = $groups->getByURLName(INTRODUCTION); ?>
@@ -29,7 +29,7 @@
         </section>
     </div>
  
-    <div class="3u">
+    <div class="4u">
         <div class="links">
             <section class="sidebar">
                 <?php $linkTitle = $groups->getByURLName(IMPORTANT_LINKS); ?>
@@ -89,7 +89,7 @@
                 <h2><?php if($lan=='en') echo 'Our Location'; else echo 'Our Location';?></h2>
             </header>
             <div style="text-align: justify;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28265.453818308466!2d85.32074693281858!3d27.680777661147783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3730472b983aa926!2sDepartment+of+Environment!5e0!3m2!1sen!2snp!4v1497513759668" width="230" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3912115245785!2d85.32252385118707!3d27.70520498270832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a7f732d815%3A0xf6ac17188a66f88c!2sKrishi-+Ghar+%2C+ICT+In+Agriculture+Nepal+Office!5e0!3m2!1sen!2snp!4v1500314179642" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </section>
 

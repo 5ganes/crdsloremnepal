@@ -47,20 +47,30 @@ if (isset($_GET['delete']))
                     <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
                       <tr>
                         <td><strong>Name</strong> :</td>
-												<td><?=$row['name']?></td>
+												<td><?=$row['firstname'].' '.$row['lastname'];?></td>
                       </tr>
-											<tr>
-											  <td><strong>Email :</strong></td>
-											  <td><?php echo $row['email']; ?></td>
-											  </tr>
-											<tr>
                         <td><strong>Address</strong> :</td>
 												<td><?php echo $row['address']; ?></td>
 												</tr>
                       <tr>
+                      <tr>
+                        <td><strong>Phone :</strong></td>
+                        <td><?php echo $row['phone']; ?></td>
+                        </tr>
+                      <tr>
+                      <tr>
+                        <td><strong>Email :</strong></td>
+                        <td><?php echo $row['email']; ?></td>
+                        </tr>
+                      <tr>
                         <td valign="top"><strong>Country :</strong></td>
                         <td valign="top"><?php echo $row['country']; ?></td>
                       </tr>
+                      <tr>
+                        <td><strong>Gender :</strong></td>
+                        <td><?php echo $row['gender']; ?></td>
+                        </tr>
+                      <tr>
                       <tr>
                         <td width="10%" valign="top"><strong>Feedback : </strong></td>
                         <td valign="top"><?php echo nl2br($row['comment']); ?></td>

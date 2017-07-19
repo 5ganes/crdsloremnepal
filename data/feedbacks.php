@@ -1,11 +1,29 @@
 <?php
 class Feedbacks
 {
-	function save($name, $address, $phone, $email, $subject, $comment)
+	function save($firstname, $lastname, $email, $address, $phone, $country, $gender, $comment)
 	{
 		global $conn;
-				
-		$sql = "INSERT INTO feedbacks SET name = '". cleanQuery($name). "', address='". cleanQuery($address) ."', phone = '". cleanQuery($phone) ."', email = '". cleanQuery($email) ."', subject='". cleanQuery($subject) ."', comment = '". cleanQuery($comment) ."', onDate = now()";
+		$firstname = cleanQuery($firstname);
+		$lastname = cleanQuery($lastname);
+		$email = cleanQuery($email);
+		$address = cleanQuery($address);
+		$phone = cleanQuery($phone);
+		$country = cleanQuery($country);
+		$gender = cleanQuery($gender);
+		$comment = cleanQuery($comment);
+
+		$sql = "INSERT INTO feedbacks 
+				SET 
+					firstname = '$firstname', 
+					lastname = '$lastname', 
+					email = '$email', 
+					address = '$address', 
+					phone = '$phone', 
+					country = '$country',
+					gender = '$gender',
+					comment = '$comment',
+					onDate = now()";
 		// echo $sql; die();
 		$conn->exec($sql);
 		
@@ -39,5 +57,4 @@ class Feedbacks
 		$row = $conn -> fetchArray($result);
 		return $row;
 	}
-}
-?>
+}country?>

@@ -1,4 +1,4 @@
-<div class="2u">
+<div class="3u">
     <section class="sidebar chief">
         <?php $chief = $groups->getByURLName(MSG_FROM_CHIEF); ?>
         <header>

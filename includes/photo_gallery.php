@@ -42,32 +42,38 @@
       }
     }
 </style>
+<div class="9u row">
+    <div class="12u skel-cell-important">
+        <section class="sidebar welcome">
+            <header>
+                <?php $row=$groups->getByURLName('photo-gallery'); ?>
+                <h2><?php if($lan=='en') echo $row['nameen']; else echo $row['name'];?></h2>
+            </header>
+            <article>
+                <?php
+                  if($lan!='en') echo $row['contentsen'];
+                  else echo $row['contents'];
+                ?>
+            </article>
+        </section>
 
-<div class="col-md-9">
-    <div class="panel panel-primary">
-        <?php $row=$groups->getByURLName('photo-gallery'); ?>         
-        <div class="panel-heading"><h3><?php if($lan=='en') echo $row['nameen']; else echo $row['name'];?></h3></div>
-        <div class="panel-body dynamic">
-            <?php
-              if($lan!='en') echo $row['contentsen'];
-              else echo $row['contents'];
-            ?>
-        </div>
-        <div class="page-row photo-gallery">
-            <?php
-            $photo = $groups->getByParentId(PHOTO_GALLERY);
-            while($photoGet = $conn->fetchArray($photo)){?>
-              <article>
-                <p>
-                  <a href="<?php if($lan=='en') echo 'en/'; echo $photoGet['urlname'];?>"><img src="<?php echo CMS_GROUPS_DIR.$photoGet['image'];?>"></a>
-                </p>
-                <h3>
-                  <a href="<?php echo $photoGet['urlname'];?>">
-                    <?php if($lan=='en') echo $photoGet['nameen']; else echo $photoGet['name'];?>
-                  </a>
-                </h3>
-              </article>
-            <?php }?>
-        </div>
-    </div>            
+        <section class="sidebar">
+            <div class="page-row photo-gallery">
+                <?php
+                $photo = $groups->getByParentId(PHOTO_GALLERY);
+                while($photoGet = $conn->fetchArray($photo)){?>
+                  <article>
+                    <p>
+                      <a href="<?php if($lan=='en') echo 'en/'; echo $photoGet['urlname'];?>"><img src="<?php echo CMS_GROUPS_DIR.$photoGet['image'];?>"></a>
+                    </p>
+                    <h3>
+                      <a href="<?php echo $photoGet['urlname'];?>">
+                        <?php if($lan=='en') echo $photoGet['nameen']; else echo $photoGet['name'];?>
+                      </a>
+                    </h3>
+                  </article>
+                <?php }?>
+            </div>
+        </section>
+    </div>
 </div>

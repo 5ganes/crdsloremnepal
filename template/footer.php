@@ -46,12 +46,12 @@
                     <section class="4u">
                         <div class="box">
                             <?php $video = $groups->getByURLName(FOOTER_VIDEO);?>
-                            <iframe src="<?php echo $video['contents'];?>" width="350" height="215" allowfullscreen = true></iframe>
+                            <iframe src="<?php echo $video['contents'];?>" width="100%" height="215" allowfullscreen = true></iframe>
                         </div>
                     </section>
                     <section class="4u">
                         <div class="box">
-                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcrdsnepaldarchula%2F&tabs=timeline&width=300&height=240&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="300" height="240" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcrdsnepaldarchula%2F&tabs=timeline&width=280&height=240&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="280" height="240" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                         </div>
                     </section>
                 </div>

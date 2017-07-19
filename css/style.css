@@ -841,7 +841,7 @@
 			}
 
 			#nav ul li ul{
-				display: none; position: absolute; width: 200px; background: #202020 url(images/img01.jpg) repeat; margin-left: 0px;z-index: 999;
+				display: none; position: absolute; width: 210px; background: #202020 url(images/img01.jpg) repeat; margin-left: 0px;z-index: 999;
 			}
 			#nav ul li:hover > ul{
 				display: block;

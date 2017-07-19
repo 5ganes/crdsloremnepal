@@ -6,14 +6,14 @@ if(isset($_POST['btnFeedback']))
 	
 	if($_SESSION['security_code'] == $_POST['security_code'] && !empty($_SESSION['security_code']))
 	{
-		// echo 'sdf'; die();
+		// print_r($_POST); die();
 		extract($_POST);
 		
-		if(!empty($name) && !empty($email) && !empty($subject) && !empty($comment) && !empty($security_code))
+		if(!empty($firstname) && !empty($lastname) && !empty($email) && !empty($address) && !empty($phone) && !empty($country) && !empty($gender) && !empty($comment) && !empty($security_code))
 		{
-			$feedbacks -> save($name, $address, $phone, $email, $subject, $comment);
+			$feedbacks -> save($firstname, $lastname, $email, $address, $phone, $country, $gender, $comment);
 			
-			$msg='Name='.$name.'<br/>Address='.$address.'<br>Phone='.$phone.'<br/>Email='.$email.'<br/>Subject='.$subject.'<br/>Comment='.$comment;
+			$msg='Name='.$firstname.' '.$lastname.'<br>Email='.$email.'<br/>Address='.$address.'<br/>Phone='.$phone.'<br/>Country='.$country.'<br/>Gender='.$gender.'<br/>Comment='.$comment;
 			//include('includes/sendemail.php');
 			$headers  = "";
 			$headers .= "MIME-Version: 1.0 \r\n";
@@ -21,7 +21,7 @@ if(isset($_POST['btnFeedback']))
 			$headers .= "X-Priority: 1\r\n";
 			//sendEmail("kh6ganesh@yahoo.com", "Inquiry", $msg, $name);
 			
-			$arrTo = array("info@doenv.gov.np");
+			$arrTo = array("info@crds.org.np");
 			$subject = "Inquiry Details :";
 			
 			mail($arrTo[0], $subject, $msg, $headers);

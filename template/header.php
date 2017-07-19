@@ -47,10 +47,8 @@
         <script type="text/javascript" src="slider/slider.js"></script>
 
         <link rel="stylesheet" href="galleryslider/slider.css">
-        <script type="text/javascript" src="galleryslider/slider.js"></script>        
-
+        <script type="text/javascript" src="galleryslider/slider.js"></script>
     </head>
     <body class="left-sidebar">
-
-    <div class="top-bar"></div>
-    <?php require 'template/header_include.php'; ?>
+        <div class="top-bar"></div>
+        <?php require 'template/header_include.php'; ?>

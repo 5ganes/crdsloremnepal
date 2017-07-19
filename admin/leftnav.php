@@ -23,6 +23,7 @@
             <li><a href="cms.php?id=867&parentId=0&groupType=Other">Footer Video</a></li>
             <!-- <li><a href="manageuser.php">Manage Users</a></li> -->
             <li><a href="cms.php?groupType=Other">Manage Other</a></li>
+            <li><a href="feedbacks.php">Manage Feedbacks</a></li>
     	</ul>
   	</li>
 </ul>

@@ -163,8 +163,52 @@
     $('#pop').attr('src', imgurl);
   }
 </script>
+<?php $lan = $_GET['lan'];?>
+<div class="9u row">
+    <div class="12u skel-cell-important">
+        <section class="sidebar welcome">
+            <header>
+                <h2><?php if($lan!='en') echo $pageName; else echo $pageNameEn;?></h2>
+            </header>
+            <article>
+                <?php
+                $content=$groups->getById($pageId);
+                $contentGet=$conn->fetchArray($content);
+                if($lan!='en')
+                   echo $contentGet['contents'];
+                else echo $contentGet['contentsen'];
+            ?>
+            </article>
+        </section>
 
-<div class="col-md-9">
+        <section class="sidebar">
+            <div class="page-row photo-gallery">
+                <?php
+                $row = $groups->getById($pageId);
+                $row = $conn->fetchArray($row);
+                $photo = $groups->getByParentId($pageId);
+                while($photoGet = $conn->fetchArray($photo)){?>
+                    <article>
+                        <p>
+                        <a href="<?php if($lan=='en') echo 'en/'; echo $row['urlname'];?>#goofy" onclick="imagePopUp('<?php echo CMS_GROUPS_DIR.$photoGet['image'];?>')">
+                           <img src="<?php echo CMS_GROUPS_DIR.$photoGet['image'];?>">
+                        </a>
+                        </p>
+                        <h3>
+                            <?php if($lan=='en') echo $photoGet['shortcontents']; else echo $photoGet['shortcontents'];?>
+                        </h3>
+                    </article>
+                <?php }?>
+            </div>
+            <div class="lightbox-target" id="goofy">
+               <img id="pop" src=""/>
+               <a href="<?php if($lan=='en') echo 'en/'; echo $row['urlname'];?>#" style="background:white; padding: 1em;color: green">Cancel</a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<!-- <div class="col-md-9">
     <div class="panel panel-primary">          
         <div class="panel-heading"><h3><?php if($lan!='en') echo $pageName; else echo $pageNameEn;?></h3></div>
         <div class="panel-body dynamic">
@@ -199,4 +243,4 @@
            <a href="<?php if($lan=='en') echo 'en/'; echo $row['urlname'];?>#" style="background:white; padding: 1em;color: green">Cancel</a>
         </div>
     </div>            
-</div>
+</div> -->

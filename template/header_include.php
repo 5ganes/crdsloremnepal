@@ -38,19 +38,21 @@
     </div>
 <!-- Header -->
 <!-- /BannerPic -->
-<div class="slider-div">
-    <div>
-        <ul class="rslides" id="slider2" style="margin-bottom: 0.5%">
-            <?php
-                $slider = $groups->getByParentId(SLIDER);
-                while($sliderGet = $conn->fetchArray($slider)){?>
-                    <li><img alt="<?php echo $sliderGet['image'];?>" src="<?php echo  CMS_GROUPS_DIR.$sliderGet['image'];?>"></li>
-                <?php }
-            ?>
-        </ul>
+<?php if(!isset($_GET['action']) and $pageLinkType==''){?>
+    <div class="slider-div">
+        <div>
+            <ul class="rslides" id="slider2" style="margin-bottom: 0.5%">
+                <?php
+                    $slider = $groups->getByParentId(SLIDER);
+                    while($sliderGet = $conn->fetchArray($slider)){?>
+                        <li><img alt="<?php echo $sliderGet['image'];?>" src="<?php echo  CMS_GROUPS_DIR.$sliderGet['image'];?>"></li>
+                    <?php }
+                ?>
+            </ul>
+        </div>
     </div>
-</div>
-    <!-- /Banner -->
+<?php }?>
+<!-- /Banner -->
 
 <!-- Main -->
     <div id="page">

@@ -1,59 +1,73 @@
-<div class="col-md-9">
-    <div class="panel panel-primary">          
-        <div class="panel-heading"><h3><?php if($lan!='en') echo $pageName; else echo $pageNameEn;?></h3></div>
-        <div class="panel-body dynamic">
-            <?php
-                $content=$groups->getById($pageId);
-                $contentGet=$conn->fetchArray($content);
-                if($lan!='en')
-                   echo $contentGet['contents'];
-                else echo $contentGet['contentsen'];
-            ?>
-        </div>
-        <div class="page-row">
-		    <div class="table-responsive">
-		    	<table class="table table-boxed">
-		            <thead>
-		                <tr>
-				            <th width="10%">SN</th>
-				            <th width="50%">News</th>
-				            <th width="40"></th>
-		                </tr>
-		            </thead>
-		            <tbody>
-		            	<?php
-						$pagename = "index.php?linkId=". $pageId ."&";
-						$sql = "SELECT * FROM groups WHERE parentId = '$pageId' ORDER BY weight DESC";
-						$newsql = $sql;
-						$limit = LISTING_LIMIT;
+<style type="text/css">
+	.sn{width: 10%;}
+	.title, .short{width: 40%}
+	.sn, .title, .short{float: left;}
+</style>
+<div class="9u row">
+    <div class="12u skel-cell-important">
+        <section class="sidebar welcome">
+            <header>
+                <h2><?php if($lan!='en') echo $pageName; else echo $pageNameEn;?></h2>
+            </header>
+            <article>
+                <?php
+                    $content=$groups->getById($pageId);
+                    $contentGet=$conn->fetchArray($content);
+                    if($lan!='en')
+                       echo $contentGet['contents'];
+                    else echo $contentGet['contentsen'];
+                ?>
+            </article>
+        </section>
 
-						//get alias name
-						$alias=$groups->getById($pageId);
-						$aliasGet=$conn->fetchArray($alias);
+        <?php
+		$sub=$groups->getByParentId($pageId);
+		if($conn->numRows($sub)>0)
+		{?>
+	        <section class="sidebar welcome news submenu">
+	            <header>
+	                <?php $newsTitle = $groups->getByURLName(NEWS_NOTICE); ?>
+	                <h2>
+	                	<div class="sn">SN</div>
+	                	<div class="title">Title</div>
+	                	<div class="short">Short Description</div>
+	                	<div style="clear: both"></div>
+	                </h2>
+	            </header>
+	            <ul class="style1">
+	                <?php
+					$pagename = "index.php?linkId=". $pageId ."&";
+					$sql = "SELECT * FROM groups WHERE parentId = '$pageId' ORDER BY weight DESC";
+					$newsql = $sql;
+					$limit = LISTING_LIMIT;
 
-						include("includes/pagination.php");
-						$return = Pagination($sql, "", $limit, $aliasGet['urlname']);
-						$arr = explode(" -- ", $return);
-						$start = $arr[0];
-						$pagelist = $arr[1];
-						$count = $arr[2];
-						$newsql .= " LIMIT $start, $limit";
-						$result = mysql_query($newsql);
-						while ($listRow = $conn->fetchArray($result))
-						{?>
-			                <tr>
-			                    <td><?php echo $count++;?></td>
-			                    <td>
-			                    	<a href="<?php if($lan=='en') echo 'en/'; echo $listRow['urlname']; ?>">
-			                    		<?php if($lan=='en') echo $listRow['nameen']; echo $listRow['name']; ?>
-			                    	</a>
-			                    </td>
-			                    <td><?php if($lan=='en') echo $listRow['shortcontentsen']; echo $listRow['shortcontents']; ?></td>
-			                </tr>
-		         		<?php }?>
-		            </tbody>
-		        </table>
-			</div>
-		</div>
-    </div>            
+					//get alias name
+					$alias=$groups->getById($pageId);
+					$aliasGet=$conn->fetchArray($alias);
+
+					include("includes/pagination.php");
+					$return = Pagination($sql, "", $limit, $aliasGet['urlname']);
+					$arr = explode(" -- ", $return);
+					$start = $arr[0];
+					$pagelist = $arr[1];
+					$count = $arr[2];
+					$newsql .= " LIMIT $start, $limit";
+					$result = mysql_query($newsql); $cnt++;
+					while ($listRow = $conn->fetchArray($result))
+					{?>
+		                <li>
+		                    <div class="sn"><?php echo $cnt++;?></div>
+		                    <div class="title">
+		                    	<a href="<?php if($lan=='en') echo 'en/'; echo $listRow['urlname']; ?>">
+		                    		<?php if($lan=='en') echo $listRow['nameen']; echo $listRow['name']; ?>
+		                    	</a>
+		                    </div>
+		                    <div class="short"><?php if($lan=='en') echo $listRow['shortcontentsen']; echo $listRow['shortcontents']; ?></div>
+		                    <div style="clear: both;"></div>
+		                </li>
+	         		<?php }?>
+	            </ul>
+	        </section>
+	    <?php }?>
+    </div>
 </div>
