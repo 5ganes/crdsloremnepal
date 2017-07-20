@@ -1,14 +1,11 @@
 <!-- Header -->
-    <div id="header" style="padding-bottom: 1%;">
-        <div>
+    <div id="header" style="padding-bottom: 0%;">
+        
         <!-- Logo -->
             <div id="logo">
-                <h1><a href="#"><img src="images/logo.png"></a></h1>
+                <a href="#"><img style="width: 100px;" src="images/logo.jpg"></a>
             </div>
-            <div>
-                <img src="./images/flag.gif" width="5%" align="right" style="padding-top: 2% ; padding-right: 1%">
-            </div>
-            <div  id="title" style="text-align:center">
+            <div  id="title">
                 <?php if($lan=='en'){?>
                     <h3>Government of Nepal</h3>
                     <h2>Community Rural Development Society-Nepal</h2>
@@ -20,7 +17,11 @@
                     <h3>(सी. डी. आर. यस. - नेपाल)</h3>
                 <?php }?>
             </div>
-        </div>
+            <div class="flag">
+                <img style="width: 62px" src="./images/flag.gif">
+            </div>
+            <div style="clear: both;"></div>
+        
     </div>
 <!-- Header -->
 <!-- Header -->

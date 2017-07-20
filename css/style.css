@@ -758,10 +758,10 @@
 	.top-bar{background: #0a0; padding: 0.5%;}
 	#header
 	{
-		position: relative;
+		/*position: relative;*/
 		background: #FFF;
 	}
-	#header div:first-child{padding: 1% 2% 0% 2%;}
+	#header div:first-child{padding: 1% 2% 0% 2%}
 
 	#header .container
 	{
@@ -775,9 +775,10 @@
 
 	#logo
 	{
-		position: absolute;
-		left: 0em;
-		top: 3em;
+		/*position: absolute;*/
+		/*left: 0em;*/
+		/*top: 3em;*/
+		float: left; width: 12%; padding: 1% 2% 1% 2%;
 	}
 	
 		#logo h1
@@ -791,6 +792,7 @@
 			font-size: 2.8em;
 			font-weight: 600;
 		}
+		.flag{float: left; width: 12%;padding: 2% 0% 0% 5%}
 
 /*********************************************************************************/
 /* Nav                                                                           */
@@ -873,6 +875,7 @@
 /*********************************************************************************/
 	#title
 	{
+		float: left;text-align:center;width: 76%;
 	}
 	#title h1
 		{
@@ -1372,4 +1375,5 @@
 
 @media screen and (max-width:600px){
 	.slider-div div img{height: 130px;}
+	.slider-div{display: none}
 }

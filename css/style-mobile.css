@@ -78,7 +78,7 @@
 			display: block;
 			color: #fff;
 			text-align: center;
-			line-height: 44px;
+			line-height: 44px; font-size: 11px;
 		}
 
 		#titleBar .toggle
@@ -225,3 +225,6 @@
 		float: none;
 		width: 100%;
 	}
+@media screen and (max-width:600px){
+	#main{margin-top: 0em;}
+}

@@ -41,7 +41,7 @@ skel.init({
 				position: 'top-left',
 				height: 44,
 				width: '100%',
-				html: '<span id="toggle" data-action="togglePanel" data-args="navPanel" style="color: white;padding: 3%;position: absolute;cursor: pointer;">Menu</span><span class="title" data-action="copyHTML" data-args="logo"></span>'
+				html: '<span id="toggle" data-action="togglePanel" data-args="navPanel" style="color: white;padding: 3%;position: absolute;cursor: pointer;">Menu</span><span class="title"><h5>(सी. डी. आर. यस. - नेपाल)</h5</span>'
 			}
 		}
 	}
@@ -49,3 +49,4 @@ skel.init({
 /*Image Silder*/
 	
 });
+// <span class="title" data-action="copyHTML" data-args="logo"></span> after menu

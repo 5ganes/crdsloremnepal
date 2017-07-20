@@ -16,7 +16,7 @@
     input[type=submit] {
         background-color: green;
         color: white;
-        padding: 12px 20px;
+        padding: 5% 25%;
         border: none;
         border-radius: 4px;
         cursor: pointer;
@@ -24,7 +24,7 @@
     input[type=reset]{
      background-color: green;
         color: white;
-        padding: 12px 20px;
+        padding: 5% 25%;
         border: none;
         border-radius: 4px;
         cursor: pointer;
