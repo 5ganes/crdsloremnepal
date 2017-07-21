@@ -1,1 +1,1 @@
-<base href="http://<?=$_SERVER['HTTP_HOST']?>/doenv/" />
+<base href="http://<?=$_SERVER['HTTP_HOST']?>/crdsnepal/" />
