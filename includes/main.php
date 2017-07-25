@@ -27,6 +27,20 @@
             <a href="<?php echo $newsTitle['urlname'] ?>" style="float: right;margin-top: 2%" class="button">More</a>
             <div style="clear: both;"></div>
         </section>
+
+        <section class="sidebar welcome news donor">
+            <header>
+                <?php $donorTitle = $groups->getByURLName(DONORS); ?>
+                <h2><?php if($lan == 'en') echo $donorTitle['nameen']; else echo $donorTitle['name']; ?></h2>
+            </header>
+            <ul class="style1">
+                <?php
+                $donor = $groups->getByParentURLName(DONORS, 'weight', 'ASC', 10);
+                while($donorGet = $conn->fetchArray($donor)){?>
+                    <li><a href="<?php echo $donorGet['urlname'];?>" target="_blank"><img title="<?php echo $donorGet['name'];?>" alt="<?php echo $donorGet['name'];?>" src="<?php echo CMS_GROUPS_DIR.$donorGet['image'];?>" width="60"></a></li>
+                <?php }?>
+            </ul>
+        </section>
     </div>
  
     <div class="4u">
@@ -71,6 +85,38 @@
                 </div>
             </section>
         </div>
+
+        <div class="audio">
+            <section class="sidebar">
+                <div class="blockmenu">
+                    <a href="<?php echo JOBS; ?>">
+                        <span class="block-icon" style="padding-top: 10px;"><img src="images/jobs.png"></span>
+                        <div class="block-content">
+                            <?php $job = $groups->getByURLName(JOBS);?>
+                            <div class="block-content-title" style="font-size:18px">
+                                <?php if($lan=='en') echo $job['nameen']; else echo $job['name']; ?>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="audio">
+        <section class="sidebar">
+            <div class="blockmenu">
+                <a href="<?php echo SUPPORT; ?>">
+                    <span class="block-icon" style="padding-top: 10px;"><img src="images/donate.png"></span>
+                    <div class="block-content">
+                        <?php $sup = $groups->getByURLName(SUPPORT);?>
+                        <div class="block-content-title" style="font-size:18px">
+                            <?php if($lan=='en') echo $sup['nameen']; else echo $sup['name']; ?>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
 
         <section class="sidebar chief" style="margin-top: 6%;">
             <?php $contact = $groups->getByURLName(CONTACT); ?>

@@ -823,8 +823,8 @@
 			#nav > ul > li > span
 			{
 				display: block;
-				margin-left: 0.7em;
-				padding: 0.80em 1.2em;
+				margin-left: 0em;
+				padding: 0.80em 1em;
 				letter-spacing: 0.06em;
 				text-decoration: none;
 				text-transform: uppercase;
@@ -891,7 +891,7 @@
 		#title h2
 		{
 			display: block;
-			padding-top: 1%;
+			padding-top: 2%;
 			text-decoration-color: blue;
 			color: blue;
 			font-size: 2.0em;
@@ -1029,11 +1029,12 @@
 	
 	#copyright
 	{
+		display: flex; justify-content: space-between;
 		position: relative;
 		padding: 3em 0em;
 		/*border-top: 1px solid #303030;*/
 		letter-spacing: 1px;
-		text-align: center;
+		text-align: left;
 		color: rgba(255,255,255,.4);
 	}
 	
@@ -1372,6 +1373,8 @@
 .news ul li a{color: #000}
 
 #copyright a:hover{color:red;}
+
+.donor ul{ display: flex;justify-content: space-between;}
 
 @media screen and (max-width:600px){
 	.slider-div div img{height: 130px;}

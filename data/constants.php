@@ -55,6 +55,9 @@ define('FOOTER_GALLERY', 'footer-gallery');
 define('DOWNLOAD', 'download');
 define('INTRODUCTION', 'welcome-to-crdsnepal');
 define('FOOTER_VIDEO', 'footer-video');
+define('DONORS', 'our-donors');
+define('JOBS', 'job-crds');
+define('SUPPORT', 'support-crds');
 
 ///////////////GENERAL CLIENT SIDE CONSTANTS///////////////////
 

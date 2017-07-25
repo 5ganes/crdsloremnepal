@@ -95,9 +95,18 @@
     <!-- /Footer -->
 
     <!-- Copyright -->
-        <div id="copyright" class="container">
-            © <?php echo date("Y") ?> Community Rural Development Society-Nepal. All rights reserved.<br>
-            Design and Development : <a href="http://krishighar.com/">Team Krishighar</a>
+        <div id="copyright" class="container" style="width: 80%">
+            <div class="leftfoot">
+                © <?php echo date("Y") ?> Community Rural Development Society-Nepal. All rights reserved.<br>
+                Design and Development : <a href="http://krishighar.com/">Team Krishighar</a>
+            </div>
+            <div class="rightfoot">
+                <a href="https://www.facebook.com/crdsnepaldarchula/" target="_blank" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter" target="_blank"></a>
+                <a href="#" class="fa fa-google" target="_blank"></a>
+                <a href="#" class="fa fa-youtube" target="_blank"></a>
+                <a href="#" class="fa fa-skype" target="_blank"></a>
+            </div>
         </div>
     <!-- Copyright ends -->
     </body>

@@ -21,7 +21,8 @@
             <li><a href="cms.php?id=274&parentId=0&groupType=Other">Message From Chief</a></li>
             <li><a href="cms.php?id=858&parentId=0&groupType=Other&groupType=Other&open">Footer Gallery</a></li>
             <li><a href="cms.php?id=867&parentId=0&groupType=Other">Footer Video</a></li>
-            <!-- <li><a href="manageuser.php">Manage Users</a></li> -->
+            <li><a href="cms.php?parentId=872&groupType=Other&open">Manage Donors</a></li>
+            <li><a href="cms.php?id=881&parentId=0&groupType=Other">Manage Support CRDS</a></li>
             <li><a href="cms.php?groupType=Other">Manage Other</a></li>
             <li><a href="feedbacks.php">Manage Feedbacks</a></li>
     	</ul>

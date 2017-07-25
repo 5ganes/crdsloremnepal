@@ -7,14 +7,18 @@
             </div>
             <div  id="title">
                 <?php if($lan=='en'){?>
-                    <h3>Government of Nepal</h3>
+                    <!-- <h3>Government of Nepal</h3> -->
                     <h2>Community Rural Development Society-Nepal</h2>
                     <h3>(CRDS - Nepal)</h3>
                 <?php }
                 else{?>
-                    <h3>नेपाल सरकार</h3>
-                    <h2>सामुदायिक ग्रामीण विकास समाज-नेपाल</h2>
-                    <h3>(सी. डी. आर. यस. - नेपाल)</h3>
+                    <!-- <h3>नेपाल सरकार</h3> -->
+                    <!-- <h2>सामुदायिक ग्रामीण विकास समाज-नेपाल</h2>
+                    <h3>(सी. डी. आर. यस. - नेपाल)</h3> -->
+
+                    <!-- <h3>Government of Nepal</h3> -->
+                    <h2>Community Rural Development Society-Nepal</h2>
+                    <h3>(CRDS - Nepal)</h3>
                 <?php }?>
             </div>
             <div class="flag">
