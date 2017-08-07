@@ -32,7 +32,7 @@ define("LINKS", 363);
 define('IMPORTANT_LINKS', 'important-links');
 define("NEWS_NOTICE", 'news-notices');
 define("INFO_OFFICER", 274);
-define("PHOTO_GALLERY", 625);
+define("PHOTO_GALLERY", 'photo-gallery');
 define("PUBLICATION", 338);
 define("YOUTUBE", 373);
 define("VIDEO_GALLERY", 386);
@@ -58,6 +58,7 @@ define('FOOTER_VIDEO', 'footer-video');
 define('DONORS', 'our-donors');
 define('JOBS', 'job-crds');
 define('SUPPORT', 'support-crds');
+define('HOT_NEWS', 'hot-news');
 
 ///////////////GENERAL CLIENT SIDE CONSTANTS///////////////////
 

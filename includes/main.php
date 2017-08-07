@@ -1,5 +1,22 @@
 <div class="9u row">
     <div class="8u skel-cell-important">
+        <!-- slider div -->
+        <section class="sidebar welcome">
+            <div class="slider-div">
+                <div>
+                    <ul class="rslides" id="slider2" style="margin-bottom: 0.5%">
+                        <?php
+                            $slider = $groups->getByParentId(SLIDER);
+                            while($sliderGet = $conn->fetchArray($slider)){?>
+                                <li><img alt="<?php echo $sliderGet['image'];?>" src="<?php echo  CMS_GROUPS_DIR.$sliderGet['image'];?>"></li>
+                            <?php }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- slider div ends -->
+
         <section class="sidebar welcome">
             <header>
                 <?php $welcome = $groups->getByURLName(INTRODUCTION); ?>
@@ -103,21 +120,25 @@
         </div>
 
         <div class="audio">
-        <section class="sidebar">
-            <div class="blockmenu">
-                <a href="<?php echo SUPPORT; ?>">
-                    <span class="block-icon" style="padding-top: 10px;"><img src="images/donate.png"></span>
-                    <div class="block-content">
-                        <?php $sup = $groups->getByURLName(SUPPORT);?>
-                        <div class="block-content-title" style="font-size:18px">
-                            <?php if($lan=='en') echo $sup['nameen']; else echo $sup['name']; ?>
+            <section class="sidebar">
+                <div class="blockmenu">
+                    <a href="<?php echo SUPPORT; ?>">
+                        <span class="block-icon" style="padding-top: 10px;"><img src="images/donate.png"></span>
+                        <div class="block-content">
+                            <?php $sup = $groups->getByURLName(SUPPORT);?>
+                            <div class="block-content-title" style="font-size:18px">
+                                <?php if($lan=='en') echo $sup['nameen']; else echo $sup['name']; ?>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
+                    </a>
+                </div>
+            </section>
+        </div>
 
+        <section class="sidebar chief" style="margin-top: 6%;padding: 0;">
+            <iframe id="nciframe" src="http://www.ashesh.com.np/calendarlink/calendar.php?api=2762015092347" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" style="border:none; overflow:hidden; width:100%; height:200px;" allowtransparency="true"></iframe>
+        </section>
+        
         <section class="sidebar chief" style="margin-top: 6%;">
             <?php $contact = $groups->getByURLName(CONTACT); ?>
             <header>

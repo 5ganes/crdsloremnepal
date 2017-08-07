@@ -60,7 +60,7 @@
         <section class="sidebar">
             <div class="page-row photo-gallery">
                 <?php
-                $photo = $groups->getByParentId(PHOTO_GALLERY);
+                $photo = $groups->getByParentURLName(PHOTO_GALLERY);
                 while($photoGet = $conn->fetchArray($photo)){?>
                   <article>
                     <p>
